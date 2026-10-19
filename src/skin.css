@@ -1,0 +1,94 @@
+/* ────────────────────────────────────────────────────────────────
+   Azure Maid — DSH Web GUI skin
+   Palette: midnight navy base, cornflower accent, ivory highlights.
+   The token overrides carry !important on purpose: the theme presenter
+   writes inline custom properties without it, and a skin must win.
+   ──────────────────────────────────────────────────────────────── */
+
+html[data-dsh-skin="azure"] { color-scheme: dark !important; }
+
+body[data-dsh-skin="azure"] {
+  --dsw-alias-bg-base: rgba(6,10,22,0.20) !important;
+  --dsw-alias-bg-layer-1: rgba(12,20,40,0.72) !important;
+  --dsw-alias-bg-layer-2: rgba(19,30,58,0.66) !important;
+  --dsw-alias-bg-layer-3: rgba(27,41,74,0.75) !important;
+  --dsw-alias-bg-overlay: rgba(38,55,92,0.94) !important;
+  --dsw-alias-bg-module-platform: rgba(26,38,68,0.7) !important;
+  --dsw-alias-label-primary: #e9f0ff !important;
+  --dsw-alias-label-secondary: #b8c6e4 !important;
+  --dsw-alias-label-tertiary: #8e9cbb !important;
+  --dsw-alias-label-caption: #6f7e9e !important;
+  --dsw-alias-label-primary-foreground: #ffffff !important;
+  --dsw-alias-border-l1: rgba(159,192,240,0.10) !important;
+  --dsw-alias-border-l2: rgba(159,192,240,0.18) !important;
+  --dsw-alias-border-l3: rgba(159,192,240,0.26) !important;
+  --dsw-alias-brand-primary: #4f7fe4 !important;
+  --dsw-alias-button-primary-fill: #4f7fe4 !important;
+  --dsw-alias-button-primary-hover: #6c98f2 !important;
+  --dsw-alias-interactive-bg-hover: rgba(122,170,255,0.12) !important;
+  --dsw-alias-interactive-bg-active: rgba(122,170,255,0.18) !important;
+  --dsw-alias-link: #8fb4ff !important;
+  --dsw-alias-markdown-code-block: rgba(9,15,32,0.85) !important;
+  --dsw-alias-markdown-inline-code: rgba(28,40,70,0.8) !important;
+  --dsw-alias-menu-icon: #dbe6ff !important;
+  background-color: #05090f;
+  background-image:
+    radial-gradient(1150px 760px at 46% 42%, rgba(4,8,16,.86) 0%, rgba(4,8,16,.62) 46%, rgba(4,8,16,0) 74%),
+    linear-gradient(90deg, rgba(5,9,15,.99) 0%, rgba(5,9,15,.96) 28%, rgba(5,9,15,.82) 50%, rgba(5,9,15,.62) 68%, rgba(5,9,15,.38) 84%, rgba(5,9,15,.22) 100%),
+    linear-gradient(180deg, rgba(5,9,15,.55) 0%, rgba(5,9,15,0) 22%, rgba(5,9,15,0) 62%, rgba(5,9,15,.72) 100%),
+    url(data:image/webp;base64,__ART__);
+  background-position: center, center, center, right -40px bottom;
+  background-size: auto, cover, cover, auto 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed, fixed, fixed, fixed;
+  background-blend-mode: normal, normal, normal, screen;
+}
+/* ── chrome ─────────────────────────────────────────────────── */
+body[data-dsh-skin="azure"] [class*="_sidebarCol"] {
+  background: linear-gradient(180deg, rgba(9,15,32,.86), rgba(6,11,24,.93)) !important;
+  backdrop-filter: blur(22px) saturate(130%);
+  border-right: 1px solid rgba(159,192,240,.14);
+  box-shadow: 18px 0 60px -46px #000;
+}
+body[data-dsh-skin="azure"] [class*="_frame"],
+body[data-dsh-skin="azure"] [class*="wSkVaW_root"],
+body[data-dsh-skin="azure"] [class*="_centerCol"],
+body[data-dsh-skin="azure"] [class*="_bottomRow"] { background-color: transparent !important; }
+
+/* ── surfaces ───────────────────────────────────────────────── */
+body[data-dsh-skin="azure"] [class*="_card"] {
+  background: rgba(9,16,33,.82) !important;
+  border: 1px solid rgba(150,185,255,.16) !important;
+  box-shadow: 0 18px 50px -28px rgba(0,0,0,.95), inset 0 1px 0 rgba(255,255,255,.05) !important;
+  backdrop-filter: blur(20px) saturate(140%);
+}
+body[data-dsh-skin="azure"] [class*="_composer"] [class*="_card"]:focus-within {
+  border-color: rgba(122,170,255,.42) !important;
+  box-shadow: 0 18px 60px -26px rgba(38,84,180,.75), 0 0 0 3px rgba(79,127,228,.14), inset 0 1px 0 rgba(255,255,255,.07) !important;
+}
+
+/* ── calls to action ────────────────────────────────────────── */
+body[data-dsh-skin="azure"] [class*="_newSession"] {
+  background: linear-gradient(135deg, rgba(88,140,255,.96), rgba(50,88,186,.96)) !important;
+  color: #fff !important;
+  border: 1px solid rgba(170,200,255,.4) !important;
+  box-shadow: 0 10px 28px -14px rgba(70,120,230,.95), inset 0 1px 0 rgba(255,255,255,.28) !important;
+}
+body[data-dsh-skin="azure"] [class*="_newSession"]:hover { filter: brightness(1.08); }
+body[data-dsh-skin="azure"] [class*="_primary"] {
+  background: linear-gradient(135deg, #6d9bff, #3f6ad8) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 20px -8px rgba(70,120,230,.9), inset 0 1px 0 rgba(255,255,255,.3) !important;
+}
+
+/* ── text selection + scrollbars ────────────────────────────── */
+body[data-dsh-skin="azure"] ::selection { background: rgba(79,127,228,.45); color: #fff; }
+body[data-dsh-skin="azure"] ::-webkit-scrollbar { width: 10px; height: 10px; }
+body[data-dsh-skin="azure"] ::-webkit-scrollbar-thumb {
+  background: rgba(51,80,127,.85);
+  border-radius: 99px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+body[data-dsh-skin="azure"] ::-webkit-scrollbar-thumb:hover { background: rgba(92,140,255,.9); background-clip: padding-box; }
+body[data-dsh-skin="azure"] ::-webkit-scrollbar-track { background: transparent; }

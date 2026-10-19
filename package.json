@@ -1,0 +1,56 @@
+{
+  "name": "dsh-skin-azure-maid",
+  "version": "1.0.0",
+  "description": "Azure Maid — a navy-glass DSH Web GUI skin with cornflower accents and a right-hand illustrated wallpaper.",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "assets",
+    "docs",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-skin",
+    "theme",
+    "dark",
+    "azure",
+    "wallpaper"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XCF1132495344/dsh-skin-azure-maid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/XCF1132495344/dsh-skin-azure-maid/issues"
+  },
+  "homepage": "https://github.com/XCF1132495344/dsh-skin-azure-maid#readme",
+  "engines": {
+    "dsh": ">=0.2.1-rc.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}

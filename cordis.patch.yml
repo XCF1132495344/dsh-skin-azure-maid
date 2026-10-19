@@ -1,0 +1,8 @@
+# Azure Maid skin bundle patch.
+#
+# One insert mounts the host row; the browser half rides the package's
+# `dsh.client` declaration and binds to this bare-name row.
+- insert:
+    - id: skin-azure-maid
+      name: 'dsh-skin-azure-maid'
+      config: {}
